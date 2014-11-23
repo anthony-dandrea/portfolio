@@ -1,9 +1,48 @@
 .hero-bg {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   @include background(image-url('espana.jpg'));
   background-position: center bottom;
 }
 
+.hero-content {
+  margin: auto;
+  max-width: 30em;
+  @include transparent($color-orange, 0.8);
+  position: relative;
+  padding: $base-unit;
+  margin-right: auto;
+  top: 80px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  @include breakpoint($lap-small, $no-query: '.lt-ie9') {
+    margin-right: 2em;
+    top: 35%;
+  }
+}
+
+.scroll {
+  @include circle($base-unit, $color-orange);
+  font-size: 3em;
+  display: table;
+  margin: auto;
+  color: $color-orange;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    color: $color-blue;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
