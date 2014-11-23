@@ -9,8 +9,10 @@
 }
 
 .hero-content {
+  color: $color-black;
   margin: auto;
   max-width: 30em;
+  @include border-radius($base-unit-half);
   @include transparent($color-orange, 0.8);
   position: relative;
   padding: $base-unit;
