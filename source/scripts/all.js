@@ -8,20 +8,14 @@ $(document).ready(function(){
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
+        var headerWidth = $('header').height();
+        console.log(headerWidth);
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
+        $('.menu, .mobile-nav ul').removeClass('active');
         return false;
       }
     }
   });
 });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   console.log('foo');
-//   var openNav = function(){
-//     console.log('bar');
-//     document.getElementById('menu').setAttribute('class','active');
-//   };
-//   document.getElementById('menu').onclick = openNav();
-// });

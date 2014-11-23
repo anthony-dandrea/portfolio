@@ -1,10 +1,16 @@
 header {
-  @include transparent($color-gray, 0.6);
+  @include transparent($color-gray, 0.8);
   position: fixed;
+  z-index: 2;
 }
 
 .logo {
   @include btn-style($base-unit-half, $color-orange, $color-white, $base-unit, $base-unit-half);
   font-size: $base-unit;
+  color: $color-white;
+  &:hover, &:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
 }
 

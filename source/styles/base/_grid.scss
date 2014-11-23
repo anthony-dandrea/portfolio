@@ -26,8 +26,9 @@ $grid-columns: (12);
 @for $i from 1 to $grid-columns + 1 {
 	%g-col-offset-#{$i},
 	.g-col-offset-#{$i} {
-		@extend %full-width;
+		width: 100%;
 		@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+			width: auto;
 			@include span($i of $grid-columns);
 		}
 	}
