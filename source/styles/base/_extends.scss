@@ -1,0 +1,172 @@
+// =======================================
+// Extendable classes (.foo)
+// and placeholder selectors (%foo)
+// =======================================
+
+%fixed-bottom,
+.fixed-bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+%fixed-top,
+.fixed-top {
+	position: absolute;
+	top: 0;
+}
+
+// http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+%vertical-align,
+.vertical-align {
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+ 		  -ms-transform: translateY(-50%);
+  				transform: translateY(-50%);
+}
+
+// More accessible way to hide an element
+// This allows screen readers to still see
+// the content for the visually impaired.
+%visually-hidden,
+.visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+%hide-mobile,
+.hide-mobile {
+	display: none;
+	visibility: hidden;
+	@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+		display: block;
+		visibility: visible;
+	}
+}
+
+%hide-desktop,
+.hide-desktop {
+	display: block;
+	visibility: visible;
+	@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+%full-width,
+.full-width {
+	width: 100%;
+}
+
+%text-align-center {
+	text-align: center;
+}
+
+// =======================================
+// Silent, extendable grid objects
+// i.e. @extend %col-baselines;
+// =======================================
+%col-box,
+.col-box {
+	padding: $base-unit;
+}
+
+%col-baselines,
+.col-baselines {
+	padding-top: $base-unit;
+	padding-bottom: $base-unit;
+}
+
+%col-gutters,
+.col-gutters {
+	padding-left: $base-unit;
+	padding-right: $base-unit;
+}
+
+%mobile-gutter,
+.mobile-gutter {
+	padding-left: $base-unit;
+	padding-right: $base-unit;
+	@include breakpoint($desk-medium, $no-query: '.lt-ie9') {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// =======================================
+// Silent, extendable box model objects
+// i.e. @extend %margin-bottom;
+// =======================================
+%no-margin,
+.no-margin {
+	margin: 0;
+}
+
+%no-padding,
+.no-padding {
+	padding: 0;
+}
+
+%vertical-margin,
+.vertical-margin {
+	margin-top: $base-unit;
+	margin-bottom: $base-unit;
+}
+
+%horizontal,
+.horizontal-margin {
+	margin-right: $base-unit;
+	margin-left: $base-unit;
+}
+
+%margin-bottom,
+.margin-bottom {
+  margin-bottom: $base-unit;
+}
+
+%margin-top,
+.margin-top {
+  margin-top: $base-unit;
+}
+
+%margin-right,
+.margin-right {
+	margin-right: $base-unit;
+}
+
+%margin-left,
+.margin-left {
+	margin-left: $base-unit;
+}
+
+%pad-bottom,
+.pad-bottom {
+  padding-bottom: $base-unit;
+}
+
+%pad-top,
+.pad-top {
+  padding-top: $base-unit;
+}
+
+%pad-left,
+.pad-left {
+  padding-left: $base-unit;
+}
+
+%pad-right,
+.pad-right {
+  padding-right: $base-unit;
+}
+
+%pad,
+.pad {
+  padding: $base-unit;
+}

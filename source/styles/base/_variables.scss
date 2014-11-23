@@ -1,0 +1,62 @@
+// =============================================
+// Base Color Variables
+// =============================================
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: #303033;
+
+$color-orange: #D75C37;
+$color-gray: #67727A;
+$color-blue: #6991AC;
+$color-light-blue: #C3D7DF;
+$color-bg-gray: #F5F5F5;
+
+// =============================================
+// Global Base Variables
+// =============================================
+// $font-open-sans: "Open Sans", sans-serif;
+$font-inconsolata: "Inconsolata";
+$font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-fontAwesome: "FontAwesome";
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+$base-font-family: $font-inconsolata;
+$base-font-size: 1em;
+$base-background-color: $color-bg-gray;
+$base-border-color: $color-gray;
+$base-border: 1px solid $base-border-color;
+$base-border-radius: 0.25em;
+$base-font-color: $color-black-light;
+$base-line-height: $base-font-size * 1.4;
+$base-border-color: $color-gray;
+$base-border: 1px solid $base-border-color;
+$base-link-color: darken(#53aee0, 10%);
+$hover-link-color: lighten($base-link-color, 10%);
+
+// =============================================
+// Spacing Variables
+// =============================================
+$base-unit: 1em;
+$base-unit-half: 0.5em;
+$base-unit-quarter: 0.25em;
+
+// =============================================
+// Breakpoint variables
+// =============================================
+$palm-small  : 25em;	// 400px
+$palm-medium : 30em;  // 480px
+$palm-large  : 35em;  // 560px
+
+$lap-small   : 40em;	// 640px
+$lap-medium  : 48em;	// 768px
+$lap-large   : 60em;	// 960px
+
+$desk-small  : 65em;	// 1040px
+$desk-medium : 80em;	// 1280px
+$desk-large  : 90em; 	// 1440px
+
+$breakpoint-no-queries: false;
+$breakpoint-no-query-fallbacks: true;

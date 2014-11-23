@@ -1,0 +1,55 @@
+// =======================================
+// Grid Settings
+// =======================================
+$grid-columns: (12);
+
+// ======================================
+// Grid Styles
+// ======================================
+.g-row {
+	@extend %mobile-gutter;
+	@include container($desk-small);
+}
+
+// Sets up 12 columns grid classes and
+// placeholder selectors that can be extended.
+@for $i from 1 to $grid-columns + 1 {
+	%g-col-#{$i},
+	.g-col-#{$i} {
+		@include span($i of $grid-columns);
+	}
+}
+
+// Sets up 12 columns grid classes and
+// placeholder selectors that can be extended.
+// These "offset" classes break at $lap-medium
+@for $i from 1 to $grid-columns + 1 {
+	%g-col-offset-#{$i},
+	.g-col-offset-#{$i} {
+		@extend %full-width;
+		@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+			@include span($i of $grid-columns);
+		}
+	}
+}
+
+// .g-one-half {
+// 	@extend %full-width;
+// 	@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+// 		@include span(6 of 12);
+// 	}
+// }
+
+// .g-one-third {
+// 	@include breakpoint($lap-medium, $no-query: '.lt-ie9') {
+// 		@include span(4 of 12);
+// 	}
+// }
+
+// ======================================
+// Clears the last column in a row
+// ======================================
+.omega,
+.lt-ie9 div[class^="g-"].omega  {
+	@include omega;
+}

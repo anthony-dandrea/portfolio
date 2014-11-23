@@ -1,0 +1,10 @@
+header {
+  @include transparent($color-gray, 0.5);
+  position: fixed;
+}
+
+.logo {
+  @include btn-style($base-unit-half, $color-orange, $color-white, $base-unit, $base-unit-half);
+  font-size: $base-unit;
+}
+
