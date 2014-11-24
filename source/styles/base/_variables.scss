@@ -33,7 +33,7 @@ $base-font-color: $color-black-light;
 $base-line-height: $base-font-size * 1.4;
 $base-border-color: $color-gray;
 $base-border: 1px solid $base-border-color;
-$base-link-color: darken(#53aee0, 10%);
+$base-link-color: darken($color-blue, 10%);
 $hover-link-color: lighten($base-link-color, 10%);
 
 // =============================================
